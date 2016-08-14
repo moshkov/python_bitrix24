@@ -1,0 +1,14 @@
+include AUTHORS
+include CHANGELOG
+include INSTALL
+include LICENSE
+include README.rst
+
+recursive-include bin *
+
+recursive-include tests *
+recursive-include python_bitrix24/python_bitrix24_django *
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * empty
