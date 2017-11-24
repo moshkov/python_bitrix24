@@ -30,7 +30,7 @@ class Bitrix24Connection(object):
 
         result_data = {}
 
-        for k, v in _data.iteritems():
+        for k, v in _data.items():
             result_data[unicode(k).encode('utf-8')] = unicode(v).encode('utf-8')
 
         return result_data
