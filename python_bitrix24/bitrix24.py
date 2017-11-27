@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import sys
 import requests
 import json
 
@@ -31,7 +32,11 @@ class Bitrix24Connection(object):
         result_data = {}
 
         for k, v in _data.items():
-            result_data[unicode(k).encode('utf-8')] = unicode(v).encode('utf-8')
+            if sys.version_info.major < 3:
+                result_data[unicode(k).encode('utf-8')] = unicode(v).encode('utf-8')
+            else:
+                result_data[str(k).encode('utf-8')] = str(v).encode('utf-8')
+
 
         return result_data
 
