@@ -51,7 +51,10 @@ class Bitrix24Connection(object):
         r = requests.post(url, data=self._build_data(data))
 
         try:
-            return json.loads(r.content.replace('\'', '"'))
+            if type(r.content) == bytes:
+                return json.loads(r.content.decode('utf-8').replace('\'', '"'))
+            else:
+                return json.loads(r.content.replace('\'', '"'))
         except:
             return None
 

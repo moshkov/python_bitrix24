@@ -48,14 +48,14 @@ https://github.com/moshkov/python_bitrix24
 
     bitrix24Connection = Bitrix24Connection('YOU_BITRIX24_API_LOGIN', 'YOU_BITRIX24_API_PASSWORD', 'YOU_BITRIX24_API_MAIN_USER_NAME')
 
-    b24_result = bitrix24Connection.add_lead('My dear Lead, {
+    b24_result = bitrix24Connection.add_lead('My dear Lead', {
         'NAME': 'Vasya Pupkin',
         'EMAIL_OTHER': 'lead@email.local',
         'UF_CRM_123456789': 'additional information',
         'UF_CRM_123456788': 'additional information 2',
     })
 
-    if b24_result.get('error', '') == '201' == 0:
+    if b24_result.get('error', '') == '201':
         print 'success'
 
     ...
@@ -66,14 +66,14 @@ https://github.com/moshkov/python_bitrix24
 
     from python_bitrix24.python_bitrix24_django import bitrix24Connection
 
-    b24_result = bitrix24Connection.add_lead('My dear Lead, {
+    b24_result = bitrix24Connection.add_lead('My dear Lead', {
         'NAME': 'Vasya Pupkin',
         'EMAIL_OTHER': 'lead@email.local',
         'UF_CRM_123456789': 'additional information',
         'UF_CRM_123456788': 'additional information 2',
     })
 
-    if b24_result.get('error', '') == '201' == 0:
+    if b24_result.get('error', '') == '201':
         print 'success'
 
     ...
