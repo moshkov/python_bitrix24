@@ -55,8 +55,8 @@ https://github.com/moshkov/python_bitrix24
         'UF_CRM_123456788': 'additional information 2',
     })
 
-    if b24_result.get('error', '') == '201':
-        print 'success'
+    if b24_result and b24_result.get('error', '') == '201':
+        print('success')
 
     ...
 
@@ -73,8 +73,8 @@ https://github.com/moshkov/python_bitrix24
         'UF_CRM_123456788': 'additional information 2',
     })
 
-    if b24_result.get('error', '') == '201':
-        print 'success'
+    if b24_result and b24_result.get('error', '') == '201':
+        print('success')
 
     ...
 
