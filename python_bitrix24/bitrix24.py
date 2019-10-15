@@ -12,11 +12,12 @@ class Bitrix24Connection(object):
     _api_password = None
     _api_url = None
 
-    def __init__(self, api_login, api_password, api_main_user_name):
+    def __init__(self, api_login, api_password, api_main_user_name, api_domain='ru'):
         self._api_login = api_login
         self._api_password = api_password
         self._api_main_user_name = api_main_user_name
-        self._api_url = "https://%s.bitrix24.ru/" % self._api_main_user_name
+        self._api_domain = api_domain
+        self._api_url = "https://{}.bitrix24.{}/".format(self._api_main_user_name, self._api_domain)
 
     def _build_url(self, path):
         return "%s%s" % (self._api_url, path)

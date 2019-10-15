@@ -46,7 +46,7 @@ https://github.com/moshkov/python_bitrix24
 
     from python_bitrix24.bitrix24 import Bitrix24Connection
 
-    bitrix24Connection = Bitrix24Connection('YOU_BITRIX24_API_LOGIN', 'YOU_BITRIX24_API_PASSWORD', 'YOU_BITRIX24_API_MAIN_USER_NAME')
+    bitrix24Connection = Bitrix24Connection('YOU_BITRIX24_API_LOGIN', 'YOU_BITRIX24_API_PASSWORD', 'YOU_BITRIX24_API_MAIN_USER_NAME', 'YOU_BITRIX24_API_DOMAIN')
 
     b24_result = bitrix24Connection.add_lead('My dear Lead, {
         'NAME': 'Vasya Pupkin',
