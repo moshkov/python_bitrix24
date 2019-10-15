@@ -25,7 +25,7 @@ https://github.com/moshkov/python_bitrix24
 
     $ pip install python_bitrix24
 
-Если используется Django, то в настройках проекта можно указать BITRIX24_API_LOGIN, BITRIX24_API_PASSWORD и BITRIX24_API_MAIN_USER_NAME.
+Если используется Django, то в настройках проекта можно указать BITRIX24_API_LOGIN, BITRIX24_API_PASSWORD, BITRIX24_API_MAIN_USER_NAME и BITRIX24_API_DOMAIN.
 
 
 Описание
@@ -60,7 +60,7 @@ https://github.com/moshkov/python_bitrix24
 
     ...
 
-Для Django (если в настройках заданы BITRIX24_API_LOGIN, BITRIX24_API_PASSWORD и BITRIX24_API_MAIN_USER_NAME):
+Для Django (если в настройках заданы BITRIX24_API_LOGIN, BITRIX24_API_PASSWORD, BITRIX24_API_MAIN_USER_NAME и BITRIX24_API_DOMAIN):
 
 .. code-block:: python
 
